@@ -1,0 +1,47 @@
+Proje 2
+[16,21,11,8,12,22] -> Merge Sort
+
+Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+
+
+1. Division Step
+
+Stage 1 : Split the array into two parts : [16,21,11, | 8,12,22]  :  *Left-> [16,21,11]    /    'Right-> [8,12,22]
+
+Stage 2 : Divide the *Left Subarray : *Left-> [16,21,11]  :  **Left-> [16]    /    **Right-> [21,11]
+
+Stage 3 : Divide the **Right Subarray : **Right-> [21,11] :  ***Left-> [21]    /    ***Right-> [11]
+
+Stage 4 : Divide the 'Right Subarray  : 'Right-> [8,12,22] :  ''Left-> [8]    /    ''Right-> [12,22]
+
+Stage 5 : Divide the ''Right Subarray : ''Right-> [12,22] :  '''Left-> [12]    /    '''Right-> [22]
+
+
+2. Merging Step
+
+Stage 1 : Merge [16] and [21, 11]
+> First, we merge [21] and [11] : Sorted--> [11,21]
+> Now, we merge [16] with [11,21] : Result--> [11,16,21]
+
+Stage 2 : Merge [8] and [12,22]
+>First, we merge [12] and [22] : Sorted--> [12,22]
+>Now, we merge [8] with [12,22] : Result--> [8,12,22]
+
+Stage 3 : Final Merge : [11,16,21] and [8.12,22]
+# Now we merge these two sorted subarrays: 
+>First, compare 8 with 11 : Result-> [8]
+>Then compare 11 with 12 : Result-> [8,11]
+>Then compare 12 with 16 : Result-> [8,11,12]
+>Then compare 16 with 21 : Result-> [8,11,12,16]
+>Then compare 21 with 22 : Result-> [8,11,12,16,21]
+>Finally, add 22 : Result--> [8,11,12,16,21,22]
+
+FİNAL RESULT
+Sorted Array : [8,11,12,16,21,22]
+
+
+
+Big-O gösterimini yazınız.
+
+Big-O gösterimi--> O(nlogn)
+
