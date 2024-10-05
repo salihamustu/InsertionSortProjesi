@@ -1,18 +1,10 @@
-Not Ortalaması Hesaplayan Program
-Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
-
-Ödev
-Aynı program içerisinde koşullu ifadeler kullanılarak, eğer kullanıcının ortalaması 60'dan büyük ise ekrana "Sınıfı Geçti" , küçük ise "Sınıfta Kaldı" yazsın.
-
-Not: Ternary Operator kullanarak yapılacak.
-
+package Homework;
 
 import java.util.Scanner;
-
-public class Main1 {
+public class GradePointAverageCalculation {
     public static void main(String[] args) {
         // Creat Veriable
-        int Math, Physical, Chemical, History, Turkish, Music ;
+        int Math, Physics, Chemistry, History, Turkish, Music ;
 
         // We Defined Our Scanner Class
         Scanner inp = new Scanner(System.in);
@@ -21,11 +13,11 @@ public class Main1 {
         System.out.print("Enter Your Math Grade : ");
         Math = inp.nextInt();
 
-        System.out.print("Enter Your Physical Grade : ");
-        Physical = inp.nextInt();
+        System.out.print("Enter Your Physics Grade : ");
+        Physics = inp.nextInt();
 
-        System.out.print("Enter Your Chemical Grade : ");
-        Chemical = inp.nextInt();
+        System.out.print("Enter Your Chemistry Grade : ");
+        Chemistry = inp.nextInt();
 
         System.out.print("Enter Your History Grade : ");
         History = inp.nextInt();
@@ -36,7 +28,7 @@ public class Main1 {
         System.out.print("Enter Your Music Grade : ");
         Music = inp.nextInt();
 
-        int total = (Math+Physical+Chemical+History+Turkish+Music);
+        int total = (Math+Physics+Chemistry+History+Turkish+Music);
         double average = total / 6 ;
         System.out.println("Your Average : "+ average);
 
@@ -44,3 +36,4 @@ public class Main1 {
 
     }
 }
+
