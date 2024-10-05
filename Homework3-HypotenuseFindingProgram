@@ -1,0 +1,39 @@
+Ödev
+Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
+
+Formül
+Üç𝑔𝑒𝑛𝑖𝑛 ç𝑒𝑣𝑟𝑒𝑠𝑖 = 2𝑢
+
+𝑢 = (a+b+c) / 2
+
+Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+
+package Homework;
+import java.util.Scanner;
+
+public class HypotenuseFindingProgram {
+    public static void main(String[] args) {
+        //Create Veriable
+        double a,b,c,d,e;
+
+        //We Defined The Scanner Class
+        Scanner inp = new Scanner(System.in);
+
+        //Get Data From User
+        System.out.print("Enter The First Vertical Edge : ");
+        a = inp.nextDouble();
+
+        System.out.print("Enter The Second Vertical Edge : ");
+        b = inp.nextDouble();
+
+        //Square Root Calculation
+        c = Math.sqrt((a*a) + (b*b));
+
+        //Calculation Triangele Area
+        d = (a+b+c) / 2;
+        e = d * (d-a) * (d-b) * (d-c);
+
+        System.out.println("The Value of The Hypotenuse : " + c);
+        System.out.println("The Value of The Area of The Triangle : " + Math.sqrt(e));
+    }
+}
