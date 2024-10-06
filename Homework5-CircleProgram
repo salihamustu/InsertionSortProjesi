@@ -1,0 +1,52 @@
+Dairenin Alanını ve Çevresini Hesaplayan Program
+Java ile yarı çapını kullanıcıdan aldığınız dairenin alanını ve çevresini hesaplayan programı yazın.
+
+Alan Formülü : π * r * r;
+
+Çevre Formülü : 2 * π * r;
+
+Ödev
+Yarıçapı r, merkez açısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
+
+𝜋 sayısını = 3.14 alınız.
+
+Formül : (𝜋 * (r*r) * 𝛼) / 360
+
+
+package Homework;
+
+import java.util.Scanner;
+
+public class CircleProgram {
+    public static void main(String[] args) {
+        //Create Variable
+        int r, angle = 0;
+        double pi = 3.14;
+
+        // We Defined Our Scanner Class
+        Scanner inp = new Scanner(System.in);
+
+        //Get Values From User
+        System.out.print("Enter The Length of Radius of The Circle : ");
+        r = inp.nextInt();
+        System.out.print("The Angle of The Circle Segment Whose Area You to Measure : ");
+        angle = inp.nextInt();
+
+        //Normalize if Angle is Greater Than 360
+        angle = (angle < 361 ? angle : angle % 360);
+
+        //Area And Perimeter Calculation
+        //Area = pi * r * r
+        double area = pi * r * r ;
+        //Perimeter = 2 * pi * r
+        double perimeter = 2 * pi * r ;
+        //Segment = (pi * (r * r) * angle) / 360
+        double segement = (pi * (r * r) * angle) / 360 ;
+
+        //Print The Result
+        System.out.println("Area of The Circle : " + area);
+        System.out.println("Perimeter of The Circle : " + perimeter);
+        System.out.println("Area of The Circle Segment : " + segement);
+        
+    }
+}
