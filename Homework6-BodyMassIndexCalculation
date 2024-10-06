@@ -1,0 +1,39 @@
+Vücut Kitle İndeksi Hesaplama
+Java ile kullanıcıdan boy ve kilo değerlerini alıp bir değişkene atayın. Aşağıdaki formüle göre kullanıcının "Vücut Kitle İndeks" değerini hesaplayıp ekrana yazdırın.
+
+Formül
+Kilo (kg) / Boy(m) * Boy(m)
+
+Çıktısı
+Lütfen boyunuzu (metre cinsinde) giriniz : 1,72
+Lütfen kilonuzu giriniz : 105
+Vücut Kitle İndeksiniz : 35.49215792320173
+
+
+package Homework;
+
+import java.util.Scanner;
+
+public class BodyMassIndexCalculation {
+    public static void main(String[] args) {
+        //Create Variable.
+        double kg,height;
+
+        //We Defined Our Scanner Class.
+        Scanner inp = new Scanner(System.in);
+
+        // Get Values From User.
+        System.out.print("Enter Your Weight : ");
+        kg = inp.nextDouble();
+        System.out.print("Enter Your Height (in Meters) : ");
+        height = inp.nextDouble();
+
+        //BMI Calculation
+        double BMI = (kg) / (height * height);
+        System.out.println("Your Body Mass Index : " + BMI);
+
+        //Write Condition
+        System.out.println(BMI > 25 ? "You Are Fat :( " : "You Are Healthy :) ");
+
+    }
+}
