@@ -1,0 +1,58 @@
+Manav Kasa Programı
+Java ile kullanıcıların manavdan almış oldukları ürünlerin kilogram değerlerine göre toplam tutarını ekrana yazdıran programı yazın.
+
+Meyveler ve KG Fiyatları
+
+Armut : 2,14 TL
+Elma : 3,67 TL
+Domates : 1,11 TL
+Muz: 0,95 TL
+Patlıcan : 5,00 TL
+Örnek Çıktı;
+
+Armut Kaç Kilo ? :0
+Elma Kaç Kilo ? :1
+Domates Kaç Kilo ? :1
+Muz Kaç Kilo ? :2
+Patlıcan Kaç Kilo ? :3
+Toplam Tutar : 21.68 TL
+
+
+
+package Homework;
+
+import java.util.Scanner;
+
+public class GroceryCashierProgram {
+    public static void main(String[] args) {
+        //Create Variable.
+        double pearPricePerKG = 2.14;
+        double applePricePerKG = 3.67;
+        double tomatoPricePerKG = 1.11;
+        double bananaPricePerKG = 0.95;
+        double eggplantPricePerKG = 5.00;
+
+        //We Define Our Scanner Class.
+        Scanner inp = new Scanner(System.in);
+
+        //Get Values From User.
+        System.out.print("How Many Kilograms of Pear : ");
+        double pearKg = inp.nextDouble();
+
+        System.out.print("How Many Kilograms of Apple : ");
+        double appleKg = inp.nextDouble();
+
+        System.out.print("How Many Kilograms of Tomato : ");
+        double tomatoKg = inp.nextDouble();
+
+        System.out.print("How Many Kilograms of Banana : ");
+        double bananaKg = inp.nextDouble();
+
+        System.out.print("How Many Kilograms of Eggplant : ");
+        double eggplantKg = inp.nextDouble();
+
+        // Calculation
+        double total = ((pearPricePerKG * pearKg) + (applePricePerKG * appleKg) + (tomatoPricePerKG * tomatoKg) + (bananaPricePerKG * bananaKg) + (eggplantPricePerKG * eggplantKg));
+        System.out.println("Total Amount : " + total + "TL");
+    }
+}
