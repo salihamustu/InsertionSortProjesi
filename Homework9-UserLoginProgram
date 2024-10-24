@@ -1,0 +1,42 @@
+Ödev
+Eğer şifre yanlış ise kullanıcıya şifresini sıfırlayıp sıfırlamayacağını sorun, eğer kullanıcı sıfırlamak isterse yeni girdiği şifrenin unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip, şifreler aynı ise ekrana "Şifre oluşturulamadı, lütfen başka şifre giriniz." sorun yoksa "Şifre oluşturuldu" yazan programı yazınız.
+
+package Homework;
+
+import java.util.Scanner;
+
+public class UserLoginProgram {
+    public static void main(String[] args) {
+        String username, password, newPassword, response;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter Your Username : ");
+        username = input.nextLine();
+
+        System.out.print("Enter Your Password : ");
+        password = input.nextLine();
+
+        if (username.equals("SaMuRay") && password.equals("sharp_sword6")) {
+            System.out.println("  Username and Password Are Correct. \n  You Are Logged In");
+
+        } else if (username.equals("SaMuRay") && password.equals("sharp_sword6")) {
+            System.out.println(" Check Your Username and Password !! \n Do You Want to Reset Password ? \n Click 1 to Create New Password. \n If You Don't Want to Change, Click 0 ");
+            response = input.nextLine();
+
+            if (response.equals("1")) {
+                System.out.println("Create New Password : ");
+                newPassword = input.nextLine();
+
+                if (newPassword.equals("sharp_sword6")){
+                    System.out.println("The Password Could Not be Created, Please Enter Another Password.");
+                }else {
+                    System.out.println("New Password Has Been Created.");
+                }
+
+            }else if (response.equals("0")) {
+                System.out.println(" You Did Not Want To Reset Your Password.\n To Log in, Please Enter Your Password.");
+            }
+        }
+    }
+}
