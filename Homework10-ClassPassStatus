@@ -1,0 +1,55 @@
+Dersler : Matematik, Fizik, Türkçe, Kimya, Müzik
+
+Geçme Notu : 55
+
+Ödev
+Eğer girilen ders notları 0 veya 100 arasında değil ise ortalamaya katılmasın.
+
+package Homework;
+
+import java.util.Scanner;
+
+public class ClassPassStatus {
+    public static void main(String[] args) {
+        //Create Variable
+        int Math, Physics, Chemistry, Turkish, Music;
+
+        //We Defined Our Scanner Class.
+        Scanner input = new Scanner(System.in);
+
+        //Interact With the User.
+        System.out.println("\nWELCOME :) \nEnter Your Grades to Calculate Your Course Average.");
+
+        //Get Values From User.
+        System.out.print(" Enter Your Math Grade : ");
+        Math = input.nextInt();
+
+        System.out.print(" Enter Your Physics Grade : ");
+        Physics = input.nextInt();
+
+        System.out.print(" Enter Your Chemistry Grade : ");
+        Chemistry = input.nextInt();
+
+        System.out.print(" Enter Your Turkish Grade : ");
+        Turkish = input.nextInt();
+
+        System.out.print(" Enter Your Music Grade : ");
+        Music = input.nextInt();
+
+        //Average Calculation
+        double average = (Math + Physics + Chemistry + Turkish + Music) / 5 ;
+
+        //Creating a Condition
+            if (average <= 55 ){
+                System.out.println(" YOU FAİLED THE CLASS. :(\n SEE YOU AGAIN NEXT YEAR. :) ");
+                System.out.println(" Average : " + average );
+
+            }else{
+                System.out.println(" YOU PASSED THE CLASS. :)\n WE WISH YOU CONTİNUED SUCCESS. :) ");
+                System.out.println(" Average : " + average);
+
+            }
+
+
+    }
+}
