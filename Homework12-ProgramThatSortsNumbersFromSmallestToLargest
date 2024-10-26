@@ -1,0 +1,60 @@
+Ödev
+Girilen 3 sayıyı "küçükten büyüğe" sıralayan programı yazınız.
+
+
+
+package Homework;
+
+import java.util.Scanner;
+
+public class ProgramThatSortsNumbersFromSmallestToLargest {
+    public static void main(String[] args) {
+        //Create Variable
+        int X,Y,Z;
+
+        //We Defined Our Scanner Class
+        Scanner input = new Scanner(System.in);
+
+        //Welcome
+        System.out.println("\nWELCOME. :) \nEnter The Numbers You Want To Sort Below. ");
+
+        //Get Values From User
+        System.out.print("\n Enter Number X : ");
+        X = input.nextInt();
+
+        System.out.print(" Enter Number Y : ");
+        Y = input.nextInt();
+
+        System.out.print(" Enter Number Z : ");
+        Z = input.nextInt();
+
+        System.out.println("\n Your Sorting From Smallest To Largest. ");
+
+        //Querying the Received Value
+        if ( ( X < Y ) && ( X < Z ) ) {
+            if ( Y < Z ) {
+                System.out.print(" X < Y < Z ");
+
+            }else {
+                System.out.println(" X < Z < Y ");
+
+            }
+        }else if ( ( Y < X ) && ( Y < Z ) ) {
+            if ( X < Z ) {
+                System.out.println(" Y < X < Z ");
+
+            }else {
+                System.out.println(" Y < Z < X ");
+
+            }
+        }else {
+            if ( X < Y ) {
+                System.out.println(" Z < X < Y ");
+
+            }else {
+                System.out.println(" Z < Y < X ");
+
+            }
+        }
+    }
+}
