@@ -1,0 +1,84 @@
+/*
+    Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı yapın.
+    Kullanıcıdan Mesafe (KM), yaşı ve yolculuk tipi (Tek Yön, Gidiş-Dönüş) bilgilerini alın.
+    Mesafe başına ücret 0,10 TL / km olarak alın.
+    İlk olarak uçuşun toplam fiyatını hesaplayın ve
+    sonrasında ki koşullara göre müşteriye aşağıdaki indirimleri uygulayın ;
+   - Kullanıcıdan alınan değerler geçerli (mesafe ve yaş değerleri pozitif sayı, yolculuk tipi ise 1 veya 2) olmalıdır. Aksi takdirde kullanıcıya "Hatalı Veri Girdiniz !" şeklinde bir uyarı verilmelidir.
+   - Kişi 12 yaşından küçükse bilet fiyatı üzerinden **%50** indirim uygulanır.
+   - Kişi 12-24 yaşları arasında ise bilet fiyatı üzerinden **%10** indirim uygulanır.
+   - Kişi 65 yaşından büyük ise bilet fiyatı üzerinden **%30** indirim uygulanır.
+   - Kişi "Yolculuk Tipini" **gidiş dönüş** seçmiş ise bilet fiyatı üzerinden **%20** indirim uygulanır.
+        */
+
+package Homework;
+
+import java.util.Scanner;
+
+public class FlightTicketPriceCalculationProgram {
+    public static void main(String[] args) {
+        //Create Variable
+        int km, age, tripType;
+        double priceKm = 0.10;
+
+        //We Defined Our Scanner Class
+        Scanner input = new Scanner(System.in);
+
+        //WELCOME Message
+        System.out.println("\n WELCOME :) \n Enter Your Information Below.");
+
+        //Get Values From User
+        System.out.print("  Enter The Distance In KM : ");
+        km = input.nextInt();
+
+        System.out.print("  Enter Your Age : ");
+        age = input.nextInt();
+
+        System.out.print(" Choose Your Ticket Type \n 1- ONE WAY \n 2- ROUND TRIP \n Enter The Number Of Your Selection : ");
+        tripType = input.nextInt();
+        if ( ( tripType == 1 ) || ( tripType == 2 ) ) {
+            if ( tripType == 1 ) {
+                System.out.println(" YOUR CHOICE : 1- ONE WAY ");
+
+            } else {
+                System.out.println(" YOUR CHOICE : 2- ROUND TRIP ");
+
+            }
+
+        }else {
+            System.out.println(" You Entered Incorrect Data! \n TRY AGAIN Using 1 or 2 . ");
+
+        }
+
+        //Regular Price Calculation
+        double regularPrice = km * priceKm ;
+        System.out.println(" REGULAR PRICE : " + regularPrice );
+
+        //Discounted Fare Calculation
+        double disconted = 0;
+        if (age < 12) {
+            disconted = 0.50;
+        } else if (age >= 12 && age <= 24) {
+            disconted = 0.10;
+        } else if (age > 65) {
+            disconted = 0.30;
+        }
+
+
+        double discontedPrice = regularPrice - (regularPrice * disconted);
+
+
+        if (tripType == 2) {
+            discontedPrice = discontedPrice - (discontedPrice * 0.20);
+
+        }
+
+
+        System.out.println( " TOTAL DISCOUNTED PRİCE : " + discontedPrice);
+
+
+    }
+
+
+    }
+
