@@ -1,0 +1,103 @@
+/*
+Java ile kullanıcıdan doğum tarihini alıp Çin Zodyağı değerini hesaplayan program yazınız.
+
+Çin Zodyağı nedir?
+
+4000 bin yıldır kullanılan bir astroloji çeşididir Çin astrolojisi ve insanları 12 değişik burç ve sembollerle tanımlar. Çin Zodyağı bu 12 burcun eşit aralıklarla(10 derece genişliğinde) sıralandığı bir hayvan halkasıdır ve yıldızlarla pek bir ilgisi yoktur.
+
+Çin Zodyağı nasıl hesaplanır?
+
+Çin zodyağı hesaplanırken kişinin doğum yılının 12 ile bölümünde kalana göre bulunur.
+
+Doğum Tarihi %12 = 0 ➜ Maymun
+
+Doğum Tarihi %12 = 1 ➜ Horoz
+
+Doğum Tarihi %12 = 2 ➜ Köpek
+
+Doğum Tarihi %12 = 3 ➜ Domuz
+
+Doğum Tarihi %12 = 4 ➜ Fare
+
+Doğum Tarihi %12 = 5 ➜ Öküz
+
+Doğum Tarihi %12 = 6 ➜ Kaplan
+
+Doğum Tarihi %12 = 7 ➜ Tavşan
+
+Doğum Tarihi %12 = 8 ➜ Ejderha
+
+Doğum Tarihi %12 = 9 ➜ Yılan
+
+Doğum Tarihi %12 = 10 ➜ At
+
+Doğum Tarihi %12 = 11 ➜ Koyun
+
+Senaryo
+
+Doğum Yılınızı Giriniz : 1990
+Çin Zodyağı Burcunuz : At
+*/
+
+
+package Homework;
+
+import java.util.Scanner;
+
+public class ChineseZodiacCalculator {
+    public static void main(String[] args) {
+        //Create Variable
+        int yearOfBirth, mod ;
+
+        //We Defined Our Scanner Class
+        Scanner input = new Scanner(System.in);
+
+        //Welcome Message
+        System.out.println(" \n WElCOME :) ");
+
+        //Get Values From User
+        System.out.print(" \n Enter Your Year Of Birth : ");
+        yearOfBirth = input.nextInt();
+
+        mod = yearOfBirth % 12;
+
+        if ( mod == 0 ) {
+            System.out.println(" Chinese Zodiac : 0 ➜ MONKEY ");
+
+        } else if (mod == 1) {
+            System.out.println(" Chinese Zodiac : 1 ➜ COCKEREL ");
+
+        }else if (mod == 2) {
+            System.out.println(" Chinese Zodiac : 2 ➜ DOG ");
+
+        }else if (mod == 3) {
+            System.out.println(" Chinese Zodiac : 3 ➜ PORK ");
+
+        }else if (mod == 4) {
+            System.out.println(" Chinese Zodiac : 4 ➜ MOUSE ");
+
+        }else if (mod == 5) {
+            System.out.println(" Chinese Zodiac : 5 ➜ OX ");
+
+        }else if (mod == 6) {
+            System.out.println(" Chinese Zodiac : 6 ➜ TIGER ");
+
+        }else if (mod == 7) {
+            System.out.println(" Chinese Zodiac : 7 ➜ RABBIT ");
+
+        }else if (mod == 8) {
+            System.out.println(" Chinese Zodiac : 8 ➜ DRAGON ");
+
+        }else if (mod == 9) {
+            System.out.println(" Chinese Zodiac : 9 ➜ SNAKE ");
+
+        }else if (mod == 10) {
+            System.out.println(" Chinese Zodiac : 10 ➜ HORSE ");
+
+        }else if (mod == 11) {
+            System.out.println(" Chinese Zodiac : 11 ➜ SHEEP ");
+
+        }
+        
+    }
+}
