@@ -1,0 +1,66 @@
+/*
+Java ile kullanıcının girdiği yılın artık olup olmadığını bulan programı yazınız.
+
+Artık Yıl Nedir?
+
+Artık yıl, Miladî takvimde 365 yerine 366 günü olan yıl. Bu fazladan gün (artık gün), normalde 28 gün olan şubat ayına 29 Şubat’ın eklenmesi ile elde edilir.
+
+Artık Yıl Nasıl Hesaplanır?
+
+Genel bir kural olarak, artık yıllar 4 rakamının katı olan yıllardır:
+
+1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024 gibi.
+100'ün katı olan yıllardan sadece 400'e kalansız olarak bölünebilenler artık yıldır:
+
+Örneğin 1200, 1600, 2000 yılları artık yıldır ancak 1700, 1800 ve 1900 artık yıl değildir.
+Sadece 400'e tam olarak bölünebilenlerin artık yıl kabul edilmesinin nedeni, bir astronomik yılın 365,25 gün değil, yaklaşık olarak 365,242 gün olmasından kaynaklanan hatayı gidermektir.
+
+Senaryo
+Yıl Giriniz : 2020
+2020 bir artık yıldır !
+
+Yıl Giriniz : 2021
+2021 bir artık yıldır değildir !
+*/
+
+
+package Homework;
+
+import java.util.Scanner;
+
+public class LeapYearCalculation {
+    public static void main(String[] args) {
+        //Create Variable
+        int year;
+
+        //We Defined Our Scanner Class
+        Scanner input = new Scanner(System.in);
+
+        //Welcome Message
+        System.out.println(" \n WELCOME :) \n ENTER THE REQUIRED INFORMATION BELOW.");
+
+        //Get Values From User
+        System.out.print(" \n Enter Year : ");
+        year = input.nextInt();
+
+        if (year % 4 == 0) {  // If the year is divisible by 4, control begins
+
+            if (year % 100 == 0) {  //A subcheck is made if the year is divisible by 100
+
+                if (year % 400 == 0) {  //If the year is divisible by 400, it is a leap year.
+                    System.out.println( (year) + " = A LEAP YEAR ! ");
+
+                } else { // If the year is divisible by 100 but not 400, it is not a leap year
+                    System.out.println( (year) + " = IS NAT A LEAP YEAR ! ");
+
+                }
+            } else {  //If the year is not divisible by 100 but is divisible by 4, it is a leap year
+                System.out.println( (year) + " = A LEAP YEAR !");
+
+            }
+        } else {  // If the year is not divisible by 4, it is definitely not a leap year.
+            System.out.println( (year) + " = IS NAT A LEAP YEAR ! ");
+        }
+    }
+
+    }
